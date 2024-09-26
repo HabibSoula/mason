@@ -1,0 +1,9 @@
+    return BlocBuilder<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
+      builder: (context, state) {
+        return switch (state) {
+{{#states}}
+{{name.pascalCase()}}State{{.}}() => const SizedBox(),
+{{/states}}
+        }
+      },
+    );
